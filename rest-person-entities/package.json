@@ -1,0 +1,22 @@
+{
+  "name": "gammaray-example-persons",
+  "scripts": {
+    "build": "rm -R dist/; tsc; webpack ./dist/app.js -o build/",
+    "deploy": "gmr d",
+    "build-deploy": "npm run build; npm run deploy",
+    "swagger": "open http://localhost:8080/swagger/gammaray-example-persons",
+    "start": "npm run build; npm run deploy; npm run swagger"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "gammaray-app": "^1.1.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "eslint": "^8.52.0",
+    "typescript": "^5.2.2",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
